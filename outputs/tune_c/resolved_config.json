@@ -1,0 +1,94 @@
+{
+  "env": {
+    "width": 6,
+    "height": 6,
+    "start": [
+      0,
+      0
+    ],
+    "goal": [
+      5,
+      5
+    ],
+    "traps": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "walls": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "max_steps": 45,
+    "step_penalty": -0.1,
+    "goal_reward": 10.0,
+    "trap_penalty": -5.0,
+    "distance_reward_scale": 0.15
+  },
+  "agent": {
+    "algorithm": "dqn",
+    "learning_rate": 0.02,
+    "gamma": 0.97,
+    "epsilon_start": 1.0,
+    "epsilon_min": 0.05,
+    "epsilon_decay": 0.995,
+    "hidden_size": 64,
+    "replay_capacity": 512,
+    "batch_size": 16,
+    "min_replay_size": 32,
+    "target_sync_interval": 25
+  },
+  "training": {
+    "phases": 6,
+    "episodes_per_phase": 320,
+    "evaluation_episodes": 30,
+    "seed": 7,
+    "output_dir": "outputs/tune_c"
+  },
+  "research": {
+    "enabled": true,
+    "mode": "heuristic",
+    "reward_improvement_threshold": 0.2,
+    "success_improvement_threshold": 0.03,
+    "plateau_patience": 2,
+    "lr_decay_factor": 0.75,
+    "lr_growth_factor": 1.05,
+    "epsilon_boost": 0.15,
+    "epsilon_min_floor": 0.03,
+    "epsilon_decay_tighten": 0.985,
+    "epsilon_decay_relax": 1.01,
+    "gamma_step": 0.01,
+    "max_learning_rate": 0.5,
+    "min_learning_rate": 0.02,
+    "max_epsilon_start": 1.0,
+    "min_epsilon_decay": 0.9,
+    "max_epsilon_decay": 0.999,
+    "max_episodes_per_phase": 320,
+    "rollback_patience": 2,
+    "rollback_success_tolerance": 0.15,
+    "rollback_reward_tolerance": 1.2,
+    "stop_success_threshold": 0.95,
+    "stop_reward_threshold": 8.0,
+    "stop_patience": 2,
+    "llm_response_path": null
+  }
+}

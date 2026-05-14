@@ -1,0 +1,51 @@
+You are an RL auto-researcher. Review the recent phase reports and respond with JSON only. Do not wrap the JSON in markdown or prose. Keep the agent independently deployable. Return keys only when you want to change them. Allowed keys: learning_rate, gamma, epsilon_start, epsilon_min, epsilon_decay, episodes_per_phase, stop_training, rollback_to_best, rationale.
+
+Current agent config:
+{
+  "algorithm": "dqn",
+  "learning_rate": 0.05,
+  "gamma": 0.95,
+  "epsilon_start": 1.0,
+  "epsilon_min": 0.05,
+  "epsilon_decay": 0.99,
+  "hidden_size": 32,
+  "replay_capacity": 512,
+  "batch_size": 16,
+  "min_replay_size": 32,
+  "target_sync_interval": 25
+}
+
+Current training config:
+{
+  "phases": 6,
+  "episodes_per_phase": 220,
+  "evaluation_episodes": 30,
+  "seed": 7,
+  "output_dir": "outputs/tune_a"
+}
+
+Recent phase reports:
+[
+  {
+    "phase_index": 0,
+    "training": {
+      "avg_reward": 0.24409090909090886,
+      "success_rate": 0.37727272727272726,
+      "avg_steps": 22.186363636363637,
+      "mean_td_error": 0.6122677077178789,
+      "final_epsilon": 0.10958290556334822
+    },
+    "evaluation": {
+      "avg_reward": -4.5,
+      "success_rate": 0.0,
+      "avg_steps": 45
+    },
+    "learning_rate": 0.05,
+    "gamma": 0.95,
+    "epsilon_start": 1.0,
+    "epsilon_decay": 0.99,
+    "episodes_per_phase": 220,
+    "q_table_size": 33,
+    "adjustments": []
+  }
+]

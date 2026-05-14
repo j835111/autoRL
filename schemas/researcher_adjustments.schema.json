@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autorl.local/schemas/researcher_adjustments.schema.json",
+  "title": "Researcher Adjustments",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "learning_rate": {
+      "type": "number",
+      "exclusiveMinimum": 0.0,
+      "maximum": 1.0
+    },
+    "gamma": {
+      "type": "number",
+      "exclusiveMinimum": 0.0,
+      "maximum": 0.999
+    },
+    "epsilon_start": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "epsilon_min": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "epsilon_decay": {
+      "type": "number",
+      "exclusiveMinimum": 0.0,
+      "maximum": 1.0
+    },
+    "episodes_per_phase": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "stop_training": {
+      "type": "boolean"
+    },
+    "rollback_to_best": {
+      "type": "boolean"
+    },
+    "rationale": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "minProperties": 1
+}

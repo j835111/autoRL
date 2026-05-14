@@ -1,0 +1,26 @@
+{
+  "phase_index": 4,
+  "training": {
+    "avg_reward": -5.018394648829432,
+    "success_rate": 0.033444816053511704,
+    "avg_steps": 21.809364548494983,
+    "mean_td_error": 0.23761114894586996,
+    "final_epsilon": 0.22340924607110255
+  },
+  "evaluation": {
+    "avg_reward": -3.750000000000002,
+    "success_rate": 0.0,
+    "avg_steps": 45
+  },
+  "learning_rate": 0.03375,
+  "gamma": 0.98,
+  "epsilon_start": 1.0,
+  "epsilon_decay": 0.995,
+  "episodes_per_phase": 299,
+  "q_table_size": 33,
+  "adjustments": [
+    "Evaluation plateau detected.",
+    "Reduce learning rate to stabilize value updates.",
+    "Plateau persisted: allocate a longer phase and slightly shorten horizon."
+  ]
+}

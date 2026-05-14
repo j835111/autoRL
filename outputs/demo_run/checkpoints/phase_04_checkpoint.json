@@ -1,0 +1,29 @@
+{
+  "phase_index": 4,
+  "policy_path": "outputs/demo_run/checkpoints/phase_04_policy.json",
+  "metrics_path": "outputs/demo_run/phase_04_metrics.json",
+  "success_rate": 1.0,
+  "avg_reward": 10.5,
+  "agent_config": {
+    "algorithm": "dqn",
+    "learning_rate": 0.04134375000000001,
+    "gamma": 0.97,
+    "epsilon_start": 1.0,
+    "epsilon_min": 0.05,
+    "epsilon_decay": 0.9701279775,
+    "hidden_size": 32,
+    "replay_capacity": 512,
+    "batch_size": 16,
+    "min_replay_size": 32,
+    "target_sync_interval": 25
+  },
+  "training_config": {
+    "phases": 6,
+    "episodes_per_phase": 220,
+    "evaluation_episodes": 30,
+    "seed": 7,
+    "output_dir": "outputs/demo_run",
+    "objective": "Optimize evaluation reward and success rate while preserving correctness.",
+    "max_runtime_seconds": null
+  }
+}

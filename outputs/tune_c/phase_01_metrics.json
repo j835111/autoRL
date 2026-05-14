@@ -1,0 +1,25 @@
+{
+  "phase_index": 1,
+  "training": {
+    "avg_reward": -4.758653846153846,
+    "success_rate": 0.057692307692307696,
+    "avg_steps": 19.78076923076923,
+    "mean_td_error": 0.30360115781619806,
+    "final_epsilon": 0.27164454854530906
+  },
+  "evaluation": {
+    "avg_reward": -3.750000000000002,
+    "success_rate": 0.0,
+    "avg_steps": 45
+  },
+  "learning_rate": 0.08,
+  "gamma": 0.99,
+  "epsilon_start": 1.0,
+  "epsilon_decay": 0.995,
+  "episodes_per_phase": 260,
+  "q_table_size": 33,
+  "adjustments": [
+    "Evaluation plateau detected.",
+    "Reduce learning rate to stabilize value updates."
+  ]
+}

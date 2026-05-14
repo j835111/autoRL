@@ -1,0 +1,8 @@
+{
+  "phase_index": 4,
+  "best_phase_index": 0,
+  "delta_success_rate": 0.0,
+  "delta_avg_reward": 0.0,
+  "is_best_so_far": false,
+  "rollback_applied": false
+}

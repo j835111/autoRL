@@ -1,0 +1,182 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://autorl.local/schemas/phase_metrics.schema.json",
+  "title": "Phase Metrics",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "phase_index",
+    "training",
+    "evaluation",
+    "learning_rate",
+    "gamma",
+    "epsilon_start",
+    "epsilon_decay",
+    "episodes_per_phase",
+    "q_table_size",
+    "adjustments"
+  ],
+  "properties": {
+    "phase_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "training": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "avg_reward",
+        "success_rate",
+        "avg_steps",
+        "mean_td_error",
+        "final_epsilon"
+      ],
+      "properties": {
+        "avg_reward": {
+          "type": "number"
+        },
+        "success_rate": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "avg_steps": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "mean_td_error": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "final_epsilon": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "avg_reward",
+        "success_rate",
+        "avg_steps"
+      ],
+      "properties": {
+        "avg_reward": {
+          "type": "number"
+        },
+        "success_rate": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "avg_steps": {
+          "type": "number",
+          "minimum": 0.0
+        }
+      }
+    },
+    "learning_rate": {
+      "type": "number",
+      "exclusiveMinimum": 0.0
+    },
+    "gamma": {
+      "type": "number",
+      "exclusiveMinimum": 0.0,
+      "maximum": 1.0
+    },
+    "epsilon_start": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "epsilon_decay": {
+      "type": "number",
+      "exclusiveMinimum": 0.0,
+      "maximum": 1.0
+    },
+    "episodes_per_phase": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "q_table_size": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "benchmark": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "reward_delta_vs_previous",
+        "success_delta_vs_previous",
+        "reward_delta_vs_best",
+        "success_delta_vs_best",
+        "noise_floor",
+        "confidence_score",
+        "passes_confidence_gate"
+      ],
+      "properties": {
+        "reward_delta_vs_previous": {
+          "type": "number"
+        },
+        "success_delta_vs_previous": {
+          "type": "number"
+        },
+        "reward_delta_vs_best": {
+          "type": "number"
+        },
+        "success_delta_vs_best": {
+          "type": "number"
+        },
+        "noise_floor": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "confidence_score": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "passes_confidence_gate": {
+          "type": "boolean"
+        }
+      }
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "passed",
+        "passed_checks",
+        "failed_checks"
+      ],
+      "properties": {
+        "passed": {
+          "type": "boolean"
+        },
+        "passed_checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "failed_checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "adjustments": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "journal_event_id": {
+      "type": "string"
+    }
+  }
+}

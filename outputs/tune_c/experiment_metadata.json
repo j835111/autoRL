@@ -1,0 +1,7 @@
+{
+  "started_at": "2026-03-30T16:08:10.387917+00:00",
+  "algorithm": "dqn",
+  "research_mode": "heuristic",
+  "seed": 7,
+  "output_dir": "outputs/tune_c"
+}

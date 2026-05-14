@@ -1,0 +1,24 @@
+{
+  "phase_index": 0,
+  "training": {
+    "avg_reward": -5.309615384615386,
+    "success_rate": 0.019230769230769232,
+    "avg_steps": 27.853846153846153,
+    "mean_td_error": 2.0724816962185764,
+    "final_epsilon": 0.27164454854530906
+  },
+  "evaluation": {
+    "avg_reward": -3.750000000000002,
+    "success_rate": 0.0,
+    "avg_steps": 45
+  },
+  "learning_rate": 0.08,
+  "gamma": 0.99,
+  "epsilon_start": 1.0,
+  "epsilon_decay": 0.995,
+  "episodes_per_phase": 260,
+  "q_table_size": 33,
+  "adjustments": [
+    "Bootstrap phase: keep initial hyperparameters."
+  ]
+}

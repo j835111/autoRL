@@ -1,0 +1,46 @@
+{
+  "phase_index": 4,
+  "training": {
+    "avg_reward": -1.2872727272727282,
+    "success_rate": 0.2318181818181818,
+    "avg_steps": 28.286363636363635,
+    "mean_td_error": 0.4252174518540588,
+    "final_epsilon": 0.05
+  },
+  "evaluation": {
+    "avg_reward": 10.5,
+    "success_rate": 1.0,
+    "avg_steps": 10
+  },
+  "learning_rate": 0.04134375000000001,
+  "gamma": 0.97,
+  "epsilon_start": 1.0,
+  "epsilon_decay": 0.9701279775,
+  "episodes_per_phase": 220,
+  "q_table_size": 33,
+  "benchmark": {
+    "reward_delta_vs_previous": 0.0,
+    "success_delta_vs_previous": 0.0,
+    "reward_delta_vs_best": 0.0,
+    "success_delta_vs_best": 0.0,
+    "noise_floor": 0.7499999999999978,
+    "confidence_score": 0.0,
+    "passes_confidence_gate": false
+  },
+  "checks": {
+    "passed": true,
+    "passed_checks": [
+      "phase_metrics_schema",
+      "checkpoint_load",
+      "standalone_play_smoke"
+    ],
+    "failed_checks": []
+  },
+  "adjustments": [
+    "Evaluation plateau detected.",
+    "Exploration looks exhausted: boost epsilon_start and relax epsilon decay.",
+    "Reduce learning rate to stabilize value updates.",
+    "Success target held long enough: recommend stopping training."
+  ],
+  "journal_event_id": "20260331T120223769485Z-seed7:phase:4"
+}
